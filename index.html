@@ -2,13 +2,47 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#f5f7fa" />
-    <title>拜访工作台</title>
-    <script type="module" crossorigin src="./assets/visit-crm-agent-v6-OvRmnCPo.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/visit-crm-agent-v6-2pbnb_za.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#eff0f3" />
+    <meta name="description" content="医药代表拜访助手：从访前准备、访后记录到后续跟进的设计分析与可操作原型。" />
+    <title>医药代表拜访助手 · 设计分析与交互原型</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-CrCzxHG_.svg" />
+    <script type="module" crossorigin src="./assets/showcase-CLrnXKZP.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-B5U0W3t5.js">
+    <link rel="stylesheet" crossorigin href="./assets/showcase-Dh7uyT0R.css">
   </head>
   <body>
-    <div id="root"></div>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="showcase-header">
+      <a class="project-brand" href="#analysis" aria-label="拜访 AI 工作台，返回设计分析">
+        <span class="brand-symbol" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="m12 3 2.1 6.9L21 12l-6.9 2.1L12 21l-2.1-6.9L3 12l6.9-2.1L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M19 2v4M17 4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span><strong>拜访 AI 工作台</strong><small>医药代表的手机拜访助手</small></span>
+      </a>
+      <nav class="showcase-tabs" role="tablist" aria-label="设计展示导航">
+        <button id="tab-analysis" role="tab" aria-selected="true" aria-controls="panel-analysis" tabindex="0" data-tab="analysis">设计分析</button>
+        <button id="tab-prototype" role="tab" aria-selected="false" aria-controls="panel-prototype" tabindex="-1" data-tab="prototype">交互原型</button>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section id="panel-prototype" role="tabpanel" aria-labelledby="tab-prototype" hidden>
+        <div class="prototype-stage">
+          <svg id="callouts" class="callout-layer" aria-hidden="true"></svg>
+          <aside class="experience-notes notes-left" id="notes-left" aria-label="当前页面的设计意图"></aside>
+          <div class="device-column">
+            <div class="phone-space"><div class="phone-model">
+              <div class="phone-screen"><div class="prototype-loading" id="prototype-loading" role="status"><span class="loading-symbol"></span><strong>正在加载原型</strong></div><iframe id="prototype-frame" title="可操作的医药代表拜访助手原型" data-src="./visit-crm-agent-v6.html?showcase=1#/work" allow="clipboard-write" loading="eager"></iframe></div>
+            </div></div>
+            <div class="prototype-toolbar">
+              <div class="scenario-links" aria-label="体验路径"><button data-route="work" class="is-active">工作首页</button><button data-route="visit/visit-chen">访前准备</button><button data-route="record/visit-late">访后记录</button><button data-route="review/visit-li">核实 AI</button><button data-route="drafts">中断续办</button><button data-route="todos">后续跟进</button></div>
+              <button class="reset-demo" id="reset-demo" aria-haspopup="dialog"><span aria-hidden="true">↺</span> 重置体验</button>
+            </div>
+          </div>
+          <aside class="experience-notes notes-right" id="notes-right" aria-label="当前页面的交互细节"></aside>
+        </div>
+      </section>
+      <section id="panel-analysis" class="document-panel" role="tabpanel" aria-labelledby="tab-analysis"></section>
+    </main>
+    <dialog id="reset-dialog" class="reset-dialog" aria-labelledby="reset-title"><form method="dialog"><h2 id="reset-title">重置演示？</h2><p>恢复本网页的初始数据，不影响独立拜访助手中的记录。</p><div class="dialog-actions"><button value="cancel">取消</button><button value="reset" class="primary-button">重置</button></div></form></dialog>
+    <noscript><p class="noscript">请启用 JavaScript，以查看设计分析并体验交互原型。</p></noscript>
   </body>
 </html>
